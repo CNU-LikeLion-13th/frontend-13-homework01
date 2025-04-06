@@ -12,10 +12,61 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+  <img src="../images/logo.svg" alt="title" class="title-icon">
+
+  <main>
+    <div id="select-container">
+      <section id="Bill">
+        <h3>Bill</h3>
+        <div class="input-wrapper">
+          <img src="../images/icon-dollar.svg" alt="icon-dollar" class="input-icon">
+          <input type="text" name="bill" placeholder="가격 입력">
+        </div>
+      </section>
+
+      <section id="Select_Tip">
+        <h3>Select Tip %</h3>
+        <label>5%</label> <label>10%</label> <label>15%</label>
+        <br>
+        <label>25%</label> <label>50%</label> <label>Custom</label>
+      </section>
+
+      <section id="Number_of_People">
+        <h3>Number of People</h3>
+        <div class="input-wrapper">
+          <img src="../images/icon-person.svg" alt="icon-person" class="input-icon">
+          <input type="text" name="people" placeholder="사람 수">
+        </div>
+      </section>
+    </div>
+
+    <div id="result-container">
+      <section id="Tip_Amount">
+        <div class="label-group">
+          <h4>Tip Amount</h4>
+          <h5>/ person</h5>
+        </div>
+        <output name="tip-result"></output>
+      </section>
+
+      <section id="Total">
+        <div class="label-group">
+          <h4>Total</h4>
+          <h5>/ person</h5>
+        </div>
+        <output name="total-result"></output>
+      </section>
+
+      <button id="reset-button">Reset</button>
+    </div>
+
+    <script src="index.js"></script>
+  </main>
   </body>
 </html>

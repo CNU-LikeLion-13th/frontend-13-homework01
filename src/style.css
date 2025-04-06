@@ -110,6 +110,16 @@ body {
     font-weight: 800;
 }
 
+.calculator__tip-button--selected {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3ac1a7;
+    color: #0d4740;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
 .calculator__tip-button--custom {
     padding: 10px;
     font-size: 16px;

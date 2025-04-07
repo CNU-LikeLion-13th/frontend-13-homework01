@@ -1,0 +1,148 @@
+/* 1) 폰트 & 색상 변수 */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* 2) 기본 리셋 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  background-color: var(--clr-light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 3) 계산기 컨테이너 */
+.calculator {
+  background: var(--clr-white);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 375px; /* 모바일 기준 */ 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1440px) {
+  .calculator {
+    max-width: 920px; /* 데스크탑 UI 폭 */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+  }
+}
+
+/* 4) 타이틀 */
+.calculator__title {
+  text-align: center;
+  color: var(--clr-very-dark-cyan);
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* 5) 입력 그룹 */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label,
+.input-group legend {
+  display: block;
+  color: var(--clr-dark-grayish-cyan);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.5rem; /* 24px */
+  border: 1px solid var(--clr-very-light-grayish-cyan);
+  border-radius: 6px;
+  color: var(--clr-very-dark-cyan);
+}
+
+/* 6) 팁 옵션 */
+.tip-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tip-btn {
+  flex: 1 1 30%;
+  padding: 0.75rem 0;
+  background: var(--clr-very-dark-cyan);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tip-btn:hover,
+.tip-btn.active {
+  background: var(--clr-strong-cyan);
+}
+
+.tip-custom {
+  flex: 1 1 30%;
+}
+
+/* 7) 결과 영역 */
+.results {
+  background: var(--clr-very-dark-cyan);
+  padding: 2rem;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.result__label {
+  color: var(--clr-grayish-cyan);
+  font-size: 0.875rem;
+}
+
+.result__label span {
+  font-size: 0.75rem;
+}
+
+.result__value {
+  color: var(--clr-strong-cyan);
+  font-size: 2rem;
+  text-align: right;
+}
+
+/* 8) 리셋 버튼 */
+.reset-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--clr-strong-cyan);
+  color: var(--clr-very-dark-cyan);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: var(--clr-very-light-grayish-cyan);
+}

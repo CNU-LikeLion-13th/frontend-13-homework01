@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 body {
+  font-family: "Space Mono", monospace;
   background-color: #cae3e6;
   display: flex;
   flex-direction: column;
@@ -43,6 +46,7 @@ label {
   gap: 12px;
 }
 .TipBtn button {
+  font-family: "Space Mono", monospace;
   padding: 8px 10px;
   border: none;
   border-radius: 5px;

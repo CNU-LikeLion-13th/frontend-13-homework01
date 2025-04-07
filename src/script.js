@@ -56,7 +56,3 @@ resetBtn.addEventListener('click', () => {
   peopleEl.value = '';
   tipBtns.forEach(b => b.classList.remove('active'));
   tipAmtEl.textContent = '$0.00';
-  totalAmtEl.textContent = '$0.00';
-  bill = tip = 0;
-  people = 1;
-}); 

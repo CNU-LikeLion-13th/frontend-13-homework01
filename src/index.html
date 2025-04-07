@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+  <link rel="stylesheet" href="src/styles.css" />
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="calculator">
+    <!-- Title -->
+    <h1 class="calculator__title">S P L I T T E R</h1>
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <!-- Bill Input -->
+    <div class="input-group">
+      <label for="bill">Bill</label>
+      <input
+        type="number"
+        id="bill"
+        placeholder="0.00"
+        min="0"
+        step="0.01"
+      />
+    </div>
 
-    <title>Frontend Mentor | Tip calculator app</title>
-  </head>
-  <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-  </body>
+    <!-- Tip % Selection -->
+    <fieldset class="input-group">
+      <legend>Select Tip %</legend>
+      <div class="tip-options">
+        <button type="button" class="tip-btn" data-tip="5">5%</button>
+        <button type="button" class="tip-btn" data-tip="10">10%</button>
+        <button type="button" class="tip-btn" data-tip="15">15%</button>
+        <button type="button" class="tip-btn" data-tip="25">25%</button>
+        <button type="button" class="tip-btn" data-tip="50">50%</button>
+        <input
+          type="number"
+          id="custom-tip"
+          class="tip-custom"
+          placeholder="Custom"
+          min="0"
+          step="1"
+        />
+      </div>
+    </fieldset>
+
+    <!-- Number of People -->
+    <div class="input-group">
+      <label for="people">Number of People</label>
+      <input
+        type="number"
+        id="people"
+        placeholder="1"
+        min="1"
+        step="1"
+      />
+    </div>
+
+    <!-- Results Display -->
+    <div class="results">
+      <div class="result">
+        <p class="result__label">Tip Amount <span>/ person</span></p>
+        <p id="tip-amount" class="result__value">$0.00</p>
+      </div>
+      <div class="result">
+        <p class="result__label">Total <span>/ person</span></p>
+        <p id="total-amount" class="result__value">$0.00</p>
+      </div>
+    </div>
+
+    <!-- Reset Button -->
+    <button type="reset" id="reset" class="reset-btn">Reset</button>
+  </main>
+
+  <script src="src/script.js"></script>
+</body>
 </html>

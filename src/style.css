@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .calculator {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-section label,
+  .input-section p {
+    font-size: 14px;
+    color: hsl(186, 14%, 43%);
+    font-weight: bold;
+  }
+  
+  .input-section input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+  }
+  
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .tip-btn {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tip-btn:hover {
+    background-color: hsl(172, 67%, 45%);
+  }
+  
+  .tip-btn.active {
+    background-color: hsl(172, 67%, 45%);
+  }
+
+  #custom-tip {
+    background-color: hsl(189, 41%, 97%);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .output-section {
+    flex: 1;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .amount-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .amount-row span {
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+  }
+  
+  .amount {
+    font-size: 32px;
+    color: hsl(172, 67%, 45%);
+    font-weight: bold;
+  }
+  
+  .reset-btn {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .reset-btn:hover {
+    background-color: hsl(185, 41%, 84%);
+  }
+  
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  
+  .input-with-icon input {
+    padding-left: 40px;
+  }
+
+  .title-icon{
+    margin-bottom: 50px;
+  }

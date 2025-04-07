@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <img src="/images/logo.svg" alt="title" class="title-icon">
+    <main class="container">
+      
+      <div class="calculator">
+        <section class="input-section">
+          <label for="bill">Bill</label>
+          <div class="input-with-icon">
+            <img src="/images/icon-dollar.svg" alt="$" />
+            <input type="number" id="bill" placeholder="0" />
+          </div>
+  
+          <p>Select Tip %</p>
+          <div class="tip-buttons">
+            <button class="tip-btn">5%</button>
+            <button class="tip-btn">10%</button>
+            <button class="tip-btn">15%</button>
+            <button class="tip-btn">25%</button>
+            <button class="tip-btn">50%</button>
+            <input type="number" id="custom-tip" placeholder="Custom" />
+          </div>
+  
+          <label for="people">Number of People</label>
+          <div class="input-with-icon">
+            <img src="/images/icon-person.svg" alt="👤" />
+            <input type="number" id="people" placeholder="0" />
+          </div>
+        </section>
+  
+        <section class="output-section">
+          <div class="amount-row">
+            <div>
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <p class="amount" id="tip-amount">$0.00</p>
+          </div>
+  
+          <div class="amount-row">
+            <div>
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <p class="amount" id="total-amount">$0.00</p>
+          </div>
+  
+          <button class="reset-btn" id="reset">RESET</button>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

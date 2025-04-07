@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(186, 14%, 43%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  margin: 2rem 0;
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.3rem;
+}
+
+.calculator {
+  background-color: #fff;
+  width: 60vw;
+  max-width: 900px;
+  border-radius: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.input-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.result-panel {
+  flex: 1;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+.field {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  pointer-events: none;
+}
+.field input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+}
+
+/* ---------- TIP BUTTONS & CUSTOM ---------- */
+.tip-group p {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.tip-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열로 균등 배분 */
+  gap: 0.5rem;
+}
+.tip-btn {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0.7rem 0;
+  text-align: center;
+  width: 100%; /* 모든 버튼 동일 폭 */
+}
+.tip-btn:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+.tip-btn.active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.custom-tip {
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 0.3rem;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  padding: 0.5rem;
+}
+
+/* ---------- RESULT PANEL ---------- */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.result-row .text h4 {
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+.result-row .text span {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.8rem;
+}
+.value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(172, 67%, 45%);
+}
+
+/* RESET 버튼 */
+#resetBtn {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#resetBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+#resetBtn:hover:enabled {
+  background-color: hsl(172, 67%, 65%);
+}
+
+/* 반응형 (선택) */
+@media (max-width: 768px) {
+  .calculator {
+    flex-direction: column;
+    width: 85vw;
+  }
+}

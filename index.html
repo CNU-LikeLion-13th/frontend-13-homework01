@@ -32,16 +32,21 @@
 
       <section id="Select_Tip">
         <h3>Select Tip %</h3>
-        <label>5%</label> <label>10%</label> <label>15%</label>
-        <br>
-        <label>25%</label> <label>50%</label> <label>Custom</label>
+        <div id="tip_div">
+          <div id="tip_label_up">
+            <label>5%</label> <label>10%</label> <label>15%</label>
+          </div>
+          <div id="tip_label_down">
+            <label>25%</label> <label>50%</label> <input type="number" name="tip_custom" placeholder="custom">
+          </div>
+        </div>
       </section>
 
       <section id="Number_of_People">
         <h3>Number of People</h3>
         <div class="input-wrapper">
           <img src="images/icon-person.svg" alt="icon-person" class="input-icon">
-          <input type="text" name="people" placeholder="사람 수">
+          <input type="text" name="people" placeholder="사람 수" value="1">
         </div>
       </section>
     </div>

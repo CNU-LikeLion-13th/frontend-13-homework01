@@ -2,6 +2,13 @@
     padding-bottom: 2rem;
 }
 
+/* input number의 위아래 화살표 지우기 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* 전체 페이지 배경 및 중앙 정렬 */
 body {
     margin: 0;
@@ -94,6 +101,12 @@ input[type="text"] {
     width: 16px;
 }
 
+#tip_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* 팁 선택 버튼들 */
 #Select_Tip label {
     display: inline-block;
@@ -107,6 +120,27 @@ input[type="text"] {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+}
+
+#Select_Tip input {
+    display: inline-block;
+    width: 30%;
+    background-color: #9fe8df;
+    color: white;
+    text-align: center;
+    padding: 0.7rem 0;
+    border-radius: 0.5rem;
+    margin: 0.3rem 0.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#tip_label_up,
+#tip_label_down {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #Select_Tip label:hover {

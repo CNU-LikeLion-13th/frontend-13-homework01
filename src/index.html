@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+  <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./images/favicon-32x32.png"
+  />
+  <link href="style.css" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+<div class="logo">
+  <img src="../images/logo.svg" alt="SPLITTER">
+</div>
 
-    <title>Frontend Mentor | Tip calculator app</title>
-  </head>
-  <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-  </body>
+<main class="app-container">
+  <section class="input-section">
+    <div class="input-group">
+      <label for="Bill">Bill</label>
+      <div class="input-wrapper">
+        <input type="text" id="Bill" placeholder="0" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="Tip-label">Select Tip %</div>
+      <div class="tip-buttons">
+        <button type="button">5%</button>
+        <button type="button">10%</button>
+        <button type="button">15%</button>
+        <button type="button">25%</button>
+        <button type="button">50%</button>
+        <input type="text" id="custom-box" placeholder="Custom" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="input-group">
+      <div class="people-number-container">
+        <label for="people-number">Number of People</label>
+        <div class="error-message">Can't be zero!</div>
+      </div>
+      <div class="input-wrapper people-input-wrapper">
+        <input type="text" id="people-number" placeholder="0" autocomplete="off">
+      </div>
+    </div>
+  </section>
+
+  <section class="output-section">
+    <section class="result">
+      <div class="result-display">
+        <div class="result-text">
+          <div class="tip-amount-label">Tip Amount</div>
+          <div class="per-person">/ person</div>
+        </div>
+        <div class="amount" id="tip-amount">$0.0</div>
+
+        <div class="result-text">
+          <div class="total-amount-label">Total</div>
+          <div class="per-person">/ person</div>
+        </div>
+        <div class="amount" id="total-amount">$0.0</div>
+      </div>
+    </section>
+    <button type="reset">RESET</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
 </html>

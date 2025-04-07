@@ -21,8 +21,9 @@ header {
 }
 
 label {
+  font-weight: bold;
   font-size: 14px;
-  color: #4b4b4b;
+  color: hsl(186, 14%, 43%);
   margin-bottom: 8px;
   display: block;
 }
@@ -72,8 +73,10 @@ label {
 }
 
 input[type="number"] {
-  width: 100%;
-  padding: 12px;
+  font-family: "Space Mono", monospace;
+  width: 95%;
+  padding: 8px;
+  height: 40px;
   font-size: 18px;
   border-radius: 8px;
   border: none;
@@ -81,6 +84,7 @@ input[type="number"] {
   cursor: pointer;
   text-align: right;
 }
+
 #bill {
   background: url(/images/icon-dollar.svg) no-repeat 20px;
   background-color: hsl(189, 41%, 97%);
@@ -98,23 +102,27 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .result {
   display: flex;
+  width: 350px;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #00474b;
-  color: white;
-  padding: 32px;
+  background-color: hsl(183, 100%, 15%);
+  padding: 30px;
   border-radius: 16px;
+  color: hsl(189, 41%, 97%);
+  font-size: 15px;
+  font-weight: bold;
 }
 
+.person_txt {
+  font-weight: bold;
+  color: hsl(186, 14%, 43%);
+  font-size: 12px;
+}
 #ResetBtn {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
   margin-top: auto;
   padding: 8px 100px;
   border: none;

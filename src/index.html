@@ -23,7 +23,7 @@
         <div class="splitter">
           <article style="margin-bottom: 40px">
             <label for="bill" class="category">Bill</label>
-            <input type="number" id="bill" placeholder="0.00" />
+            <input type="number" id="bill" placeholder="0" />
           </article>
           <article style="margin-bottom: 40px">
             <label class="category">Select Tip %</label>
@@ -42,15 +42,15 @@
           </article>
         </div>
         <aside class="result">
-          <div>
+          <div style="margin: 20px 0 40px 10px">
             <div>Tip Amount</div>
-            <div>/ person</div>
+            <div class="person_txt">/ person</div>
           </div>
-          <div>
+          <div style="margin: 0 0 0 10px">
             <div>Total</div>
-            <div>/ person</div>
+            <div class="person_txt">/ person</div>
           </div>
-          <button id="ResetBtn">Reset</button>
+          <button id="ResetBtn">RESET</button>
         </aside>
       </section>
     </main>

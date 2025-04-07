@@ -24,11 +24,35 @@ function calculate() {
 }
 
 tipButtons.forEach((button) => {
-  // 모든 팁 버튼의 이벤트 발생을 체크하기 위해 각각의 버튼을 forEach로 받아온다.
   button.addEventListener("click", function () {
-    // 그리고 버튼이 클릭되는 이벤트를 받았다면
-    tipPercent = parseInt(this.getAttribute("data-tip")); // 팁 퍼센트에 버튼마다의 data-tip 속성 값을 int로 넣는다.
-    calculate(); // 위에서 만든 결과 출력 계산기에 넣는다.
+    // 버튼을 눌렀으면 이전까지의 버튼을 눌렀을 때 색 변화를 모두 없애고 data-clicked 상태로 false로 만든다.
+    tipButtons.forEach((btn) => {
+      btn.style.backgroundColor = "hsl(183, 100%, 15%)";
+      btn.style.color = "hsl(189, 41%, 97%)";
+      btn.setAttribute("data-clicked", "false");
+    });
+    // 버튼을 눌렀을 때의 스타일로 바꿔주고 data-clicked라는 속성을 true로 만든다.
+    button.style.backgroundColor = "hsl(172, 67%, 45%)";
+    button.style.color = "hsl(183, 100%, 15%)";
+    button.setAttribute("data-clicked", "true");
+    tipPercent = parseInt(this.getAttribute("data-tip"));
+    calculate();
+  });
+  // 여기는 클릭이 아닌 마우스가 올라갔을 때, 내려갔을 때
+  button.addEventListener("mouseover", function () {
+    if (button.getAttribute("data-clicked") !== "true") {
+      // 마우스를 올린 버튼이 clicked된 버튼이 아닐 때만 실행
+      button.style.backgroundColor = "hsl(185, 41%, 84%)";
+      button.style.color = "hsl(183, 100%, 15%)";
+    }
+  });
+
+  button.addEventListener("mouseout", function () {
+    if (button.getAttribute("data-clicked") !== "true") {
+      // 마우스를 올린 버튼이 clicked된 버튼이 아닐 때만 실행
+      button.style.backgroundColor = "hsl(183, 100%, 15%)";
+      button.style.color = "hsl(189, 41%, 97%)";
+    }
   });
 });
 

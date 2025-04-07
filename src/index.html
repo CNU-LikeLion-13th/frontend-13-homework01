@@ -27,12 +27,13 @@
           </article>
           <article style="margin-bottom: 40px">
             <label class="category">Select Tip %</label>
-            <div class="TipBtn">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
+
+            <div class="TipBtns">
+              <button class="TipBtn" data-tip="5">5%</button>
+              <button class="TipBtn" data-tip="10">10%</button>
+              <button class="TipBtn" data-tip="15">15%</button>
+              <button class="TipBtn" data-tip="25">25%</button>
+              <button class="TipBtn" data-tip="50">50%</button>
               <button id="custom">Custom</button>
             </div>
           </article>
@@ -47,18 +48,19 @@
               <div>Tip Amount</div>
               <div class="person_txt">/ person</div>
             </div>
-            <div class="amount">$0.00</div>
+            <div class="amountTip">$0.00</div>
           </div>
           <div class="result-total">
             <div>
               <div>Total</div>
               <div class="person_txt">/ person</div>
             </div>
-            <div class="amount">$0.00</div>
+            <div class="amountTotal">$0.00</div>
           </div>
           <button id="ResetBtn">RESET</button>
         </aside>
       </section>
+      <script src="index.js"></script>
     </main>
   </body>
 </html>

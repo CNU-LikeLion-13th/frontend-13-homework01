@@ -3,19 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css">
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <!-- displays site properly based on user's device -->
+
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="images/favicon-32x32.png"
+        />
+
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <header class ="logo">
+      <img src = "../images/logo.svg" alt = "logo_icon">
+    </header>
+
+    <main class ="layout">
+
+      <section class = "layout__left">
+        <section class = "layout__left-top">
+          <label>
+            bill
+            <div class =" input">
+            <input type="number" placeholder="0" class="input-icon1">
+            </div>
+          </label>
+        </section>
+
+        <section class = "layout__left-middle">
+          <label>
+            Select tip
+            <div class ="grid">
+            <button class = "middle__item" type="button">5%</button>
+            <button class = "middle__item" type="button">10%</button>
+            <button class = "middle__item" type="button">15%</button>
+            <button class = "middle__item" type="button">25%</button>
+            <button class = "middle__item" type="button">50%</button>
+            <input  class="middle__value" type="number" placeholder="Custom">
+            </div>
+          </label>
+        </section>
+
+
+        <section class =" layout__left-bottom">
+          <label>
+            Number of people
+            <div class="input">
+            <input type="number" placeholder="0" class="input-icon2">
+            </div>
+          </label>
+        </section>
+      </section>
+
+
+
+      <section class ="layout__right">
+        <section class = "result__item">
+          <section class = "text">
+            <p>Tip Amount</p>
+            <p class="sub">/ person</p>
+          </section>
+          <section class = "price1">
+            <p>$0.00</p>
+          </section>
+        </section>
+        
+        <section class="result__item">
+          <section class = "text">
+            <p>Total</p>
+            <p class="sub">/ person</p>
+          </section>
+          <section class = "price2">
+            <p>$0.00</p>
+          </section>
+        </section>
+        
+
+        <section class ="layout__button">
+          <button type="button">Reset</button>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

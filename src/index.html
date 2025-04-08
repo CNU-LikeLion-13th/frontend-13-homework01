@@ -11,11 +11,56 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
+    <main>
+      <header>
+        <img id="logo" , src="/images/logo.svg" />
+      </header>
+      <section class="container">
+        <div class="splitter">
+          <article style="margin-bottom: 40px">
+            <label for="bill" class="category">Bill</label>
+            <input type="number" id="bill" placeholder="0" />
+          </article>
+          <article style="margin-bottom: 40px">
+            <label class="category">Select Tip %</label>
+
+            <div class="TipBtns">
+              <button class="TipBtn" data-tip="5">5%</button>
+              <button class="TipBtn" data-tip="10">10%</button>
+              <button class="TipBtn" data-tip="15">15%</button>
+              <button class="TipBtn" data-tip="25">25%</button>
+              <button class="TipBtn" data-tip="50">50%</button>
+              <button id="custom">Custom</button>
+            </div>
+          </article>
+          <article>
+            <label for="people" class="category">Number of People</label>
+            <input type="number" id="people" placeholder="0" />
+          </article>
+        </div>
+        <aside class="result">
+          <div class="result-amount">
+            <div>
+              <div>Tip Amount</div>
+              <div class="person_txt">/ person</div>
+            </div>
+            <div class="amountTip">$0.00</div>
+          </div>
+          <div class="result-total">
+            <div>
+              <div>Total</div>
+              <div class="person_txt">/ person</div>
+            </div>
+            <div class="amountTotal">$0.00</div>
+          </div>
+          <button id="ResetBtn">RESET</button>
+        </aside>
+      </section>
+      <script src="index.js"></script>
+    </main>
   </body>
 </html>

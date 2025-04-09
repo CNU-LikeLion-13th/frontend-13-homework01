@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Tip calculator app</title>
-  </head>
-  <body>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
-  </body>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="jssheet" href="index.js">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <main>
+    <article class="container">
+      <section class="left">
+
+        <label>Bill</label>
+        <input type="number" id="bill">
+
+        <label>Select Tip %</label>
+        <div class="tip-buttons">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button>Custom</button>
+        </div> <br>
+
+        <label> Number of People</label>
+        <input type="number" id="person">
+      </section>
+
+      <aside class="right">
+        <div class="result-block">
+          <p>Tip amount<br><small>/person</small></p>
+          <p id="tip-amount" class="amount">$0.00</p>
+        </div>
+        <div class="result-block">
+          <p>Total<br><small>/person</small></p>
+          <p id="total-amount" class="amount">$0.00</p>
+        </div>
+
+        <div class="reset-button">
+          <button id="reset">RESET</button>
+        </div>
+      </aside>
+    </article>
+  </main>
+  <script>
+
+  </script>
+</body>
+
 </html>

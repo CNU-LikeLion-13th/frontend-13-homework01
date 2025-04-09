@@ -1,0 +1,120 @@
+body {
+    background-color: hsl(185, 41%, 84%);
+    color:lightslategray;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 24px;
+    height: 100vh; /*전체 화면 높이*/
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button, input {
+    font-family: inherit;
+  }
+
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+  }
+
+  .left {
+    padding: 1rem;
+    width: 300px;
+
+  }
+
+  .right {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    width: 300px;
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: hsl(183, 100%, 15%);
+    text-align: right;
+  }
+
+  .tip-buttons button {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 3px;
+    font-size: 1rem;
+    width: 30%;
+    border-radius: 5px;
+  }
+
+  .tip-buttons button.active{
+    background-color:  hsl(172, 67%, 45%);
+    color: lightslategrey;
+  }
+  .left-label {
+    font-size: 10px;
+    color: hsl(185, 41%, 84%);
+  }
+
+  #bill {
+    background: url(../images/icon-dollar.svg) no-repeat 5px center;
+    background-size: 15px;
+    background-color: hsl(189, 41%, 97%);
+    height: 20px;
+  }
+
+  #person {
+    background: url(../images/icon-person.svg) no-repeat 5px center;
+    background-size: 15px;
+    background-color: hsl(189, 41%, 97%);
+    height: 20px;
+  }
+
+  .tip-buttons {
+    margin: 0;
+  }
+
+  .reset-button{
+    width: 100%;
+  }
+  .reset-button button {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+
+
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  .result-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .result-block p{
+    margin:0;
+    color: white;
+    font-size: 14px;
+  }
+  .amount{
+    font-size: 32px;
+    font-weight: bold;
+    color: hsl(172, 67%, 45%)
+  }
